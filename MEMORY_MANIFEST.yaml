@@ -1,0 +1,68 @@
+schema_version: '1.0'
+repository_id: memoria-externa-agent-sdlc-chat1-s1
+created_at: '2026-10-20T15:06:29Z'
+updated_at: '2026-10-20T15:44:39Z'
+generation_date: '2026-10-20'
+entrypoint: START_HERE.md
+repository_git_commit: null
+repository_remote: https://github.com/Diiegoal/memoria-externa
+scope: one documentary project, chat-1, one session, two complete unmodified Spanish originals; other
+  content translated into English
+source_integrity:
+  policy: unchanged original bytes; SHA-256 for raw files under the recorded chat path
+  manifest: raw/agent-sdlc-13-modulos/chat-1/manifest.sha256
+  files:
+  - path: raw/agent-sdlc-13-modulos/chat-1/turns/0001-user-original.md
+    sha256: 74f78284c6952ea882c5042e54c6bc33fe42f8568850459498225e4b2a06eef5
+  - path: raw/agent-sdlc-13-modulos/chat-1/turns/0002-assistant-original.md
+    sha256: c8f6ac9200bc94252b30341c18b1f3b03170788b3fafb9e47d99a42795e3f857
+projects:
+- id: agent-sdlc-13-modulos
+  path: projects/agent-sdlc-13-modulos
+  state: projects/agent-sdlc-13-modulos/current-state.md
+  handoff: projects/agent-sdlc-13-modulos/handoff.md
+  latest_verified_session: S-20261020-001
+  source_repo_commit: 282abe6075bbe84972e3e468b4ffa5c79d23a272
+  source_commit_kind: commit cited by the original report, not a commit of this memory ZIP
+  sessions:
+  - projects/agent-sdlc-13-modulos/sessions/S-20261020-001.md
+  decisions:
+  - projects/agent-sdlc-13-modulos/decisions/DEC-0001.md
+  tasks: []
+  raw_messages:
+  - raw/agent-sdlc-13-modulos/chat-1/turns/0001-user-original.md
+  - raw/agent-sdlc-13-modulos/chat-1/turns/0002-assistant-original.md
+policies:
+- governance/memory-policy.md
+- governance/security-policy.md
+- governance/retention-policy.md
+- governance/citation-policy.md
+- governance/naming-conventions.md
+- governance/recovery-runbook.md
+schemas:
+  session: schemas/session.schema.json
+  event: schemas/event.schema.json
+  decision: schemas/decision.schema.json
+  task: schemas/task.schema.json
+indexes:
+  projects: indexes/projects.md
+  topics: indexes/topics.md
+  sessions: indexes/sessions.jsonl
+  search: indexes/search-catalog.jsonl
+events:
+- events/agent-sdlc-13-modulos.jsonl
+tools:
+- tools/build_context.py
+- tools/validate_memory.py
+- tools/rebuild_indexes.py
+validation:
+  automation_status: local definitions only; this English edition has not been uploaded or executed
+    remotely
+  historical_chat_completeness: NOT_RECORDED
+  approval_scope: Diego Aguirre self-identified and approved this personal documentation package;
+    module order adoption only, report §1; no external certification
+inventory_policy: only structural system files and evidenced instances; preserve empty directories
+  in ZIP
+language: English for derived documentation, tools and metadata; unchanged Spanish in raw original
+  turns
+documentary_owner: Diego Aguirre (self-declared October 20, 2026; not independently identity-verified)

@@ -1,0 +1,21 @@
+# Workflow definition for future publishing; no GitHub execution is claimed.
+name: Validate external memory
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # review and pin to a vetted SHA before production usage
+      - uses: actions/setup-python@v5 # review and pin to a vetted SHA before production usage
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install 'PyYAML>=6,<7' 'jsonschema>=4,<5'
+      - name: Validate memory structure and references
+        run: python tools/validate_memory.py
+      - name: Verify derived indexes
+        run: python tools/rebuild_indexes.py --check

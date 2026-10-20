@@ -1,0 +1,11 @@
+# OPTIONAL GitHub CODEOWNERS EXAMPLE — NOT VERIFIED AS ACTIVE FOR THIS ZIP.
+# The reference repository is Diiegoal/memoria-externa and its public owner is Diiegoal.
+# Diego Aguirre self-identifies as the project's owner; GitHub account control,
+# permission enforcement, protected branches, and publication of this edition
+# have not been independently tested. Activate only after checking permissions.
+# * @Diiegoal
+# /governance/ @Diiegoal
+# /schemas/ @Diiegoal
+# /tools/ @Diiegoal
+# /raw/ @Diiegoal
+# /.github/ @Diiegoal

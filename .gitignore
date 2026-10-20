@@ -1,0 +1,12 @@
+# Prevents accidental NEW additions only; does NOT protect already committed data.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.tmp/
+*.swp
+context.md
+# Deliberately do not ignore raw/; review confidentiality before publication.
